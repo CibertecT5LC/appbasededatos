@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import pe.edu.cibertec.appbasededatos.model.bd.Estado;
 import pe.edu.cibertec.appbasededatos.service.EstadoService;
 
 @Controller
@@ -24,6 +25,9 @@ public class EstadoController {
 	
 	@GetMapping("/frmRegEstado")
 	public String frmRegEstado(Model model) {
+		model.addAttribute("estadoForm", 
+				new Estado());
+		model.addAttribute("visualizar", false);
 		return "Estado/frmRegEstado";
 	}
 	
