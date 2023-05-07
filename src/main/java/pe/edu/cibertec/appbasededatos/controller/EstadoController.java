@@ -22,5 +22,10 @@ public class EstadoController {
 		return "Estado/frmMantEstado";
 	}
 	
+	@GetMapping("/frmRegEstado")
+	public String frmRegEstado(Model model) {
+		return "Estado/frmRegEstado";
+	}
+	
 
 }
